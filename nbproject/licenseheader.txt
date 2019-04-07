@@ -1,0 +1,7 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}Crappy Portal was built and designed by Joey Torii and Carlos Andres Vazquez Baur
+<#if licenseLast??>
+${licenseLast}
+</#if>
