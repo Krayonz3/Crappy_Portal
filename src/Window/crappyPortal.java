@@ -17,6 +17,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.image.BufferStrategy;
 import java.io.PrintStream;
+import rendering.Texture;
 
 /**
  *
@@ -28,7 +29,11 @@ public class crappyPortal extends Canvas implements Runnable {
     public static final int WINDOW_WIDTH = 640;
     public static final int WINDOW_HEIGHT = WINDOW_WIDTH / 4 * 3;
     private boolean         running;
+    private Texture texture;
     
+    public crappyPortal(){
+        texture = new Texture("test");
+    }
     private void tick() {
         
     }
@@ -44,6 +49,7 @@ public class crappyPortal extends Canvas implements Runnable {
         //dtrawing area
         g.setColor(Color.RED);
         g.fillRect(0,0,WINDOW_WIDTH,WINDOW_HEIGHT);
+        texture.render(g, 100, 100);
         /////////////////
         g.dispose();        
         bs.show();
@@ -107,7 +113,7 @@ public class crappyPortal extends Canvas implements Runnable {
         System.exit(0);
     }
     /**
-     * @param args the command line arguments
+     * @param arg s the command line arguments
      */
     public static void main(String[] args) {
        crappyPortal game = new crappyPortal();
