@@ -23,7 +23,7 @@ import rendering.Texture;
  *
  * @author carlo_000
  */
-public class crappyPortal extends Canvas implements Runnable {
+public class crappyPortalOldVersion extends Canvas implements Runnable {
     
     public static final String TITLE = "Crappy Portal";
     public static final int WINDOW_WIDTH = 640;
@@ -31,7 +31,7 @@ public class crappyPortal extends Canvas implements Runnable {
     private boolean         running;
     private Texture texture;
     
-    public crappyPortal(){
+    public crappyPortalOldVersion(){
         texture = new Texture("test");
     }
     private void tick() {
@@ -116,7 +116,7 @@ public class crappyPortal extends Canvas implements Runnable {
      * @param arg s the command line arguments
      */
     public static void main(String[] args) {
-       crappyPortal game = new crappyPortal();
+       crappyPortalOldVersion game = new crappyPortalOldVersion();
        JFrame frame = new JFrame(TITLE);
        frame.add(game);
        frame.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
